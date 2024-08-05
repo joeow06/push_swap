@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/05 13:50:50 by joeow            ###   ########.fr       */
+/*   Updated: 2024/08/03 15:14:33 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	stack_init(t_stack_node **a, char **argv)
 {
-	t_stack_node	*a;
-	t_stack_node	*b;
+	long	nbr;
+	int		i;
 
-	a = NULL;
-	b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	stack_init(&a, argv + 1);
-	return (0);
+	while (argv[i])
+	{
+		if (error_syntax(argv[i]))
+			free_errors(a);
+		nbr = ft_atol(argv[i]);
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			free_errors(a);
+		if (error_repetition(*a, (int)nbr))
+			free_errors(a);
+		append_node(a, (int)nbr);
+		i++;
+	}
 }
