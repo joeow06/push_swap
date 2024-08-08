@@ -47,9 +47,8 @@ void	append_node(t_stack_node **a, int n)
 	{
 		*stack = node;
 		node->prev = NULL;
-	}
 		last_node = find_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}
-}_
+}
