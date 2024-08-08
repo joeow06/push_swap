@@ -30,3 +30,26 @@ void	stack_init(t_stack_node **a, char **argv)
 		i++;
 	}
 }
+
+void	append_node(t_stack_node **a, int n)
+{
+	t_stack_node	*node;
+	t_stack_node	*last_node;
+
+	if (!stack)
+		return ;
+	node = malloc(sizeof(t_stack_node));
+	if (!node)
+		return ;
+	node->next = NULL;
+	node->data = n;
+	if (!(*stack))
+	{
+		*stack = node;
+		node->prev = NULL;
+	}
+		last_node = find_last_node(*stack);
+		last_node->next = node;
+		node->prev = last_node;
+	}
+}_
