@@ -12,11 +12,15 @@
 
 #include "push_swap.h"
 
+void		stack_init(t_stack_node **a, char **argv);
+static	long	ft_atol(const char *str);
+
 void	stack_init(t_stack_node **a, char **argv)
 {
 	long	nbr;
 	int		i;
 
+	i = 0;
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
@@ -31,24 +35,30 @@ void	stack_init(t_stack_node **a, char **argv)
 	}
 }
 
-void	append_node(t_stack_node **a, int n)
+static long	ft_atol(const char *str)
 {
-	t_stack_node	*node;
-	t_stack_node	*last_node;
+	long	num;
+	int		sign;
+	int		i;
 
-	if (!stack)
-		return ;
-	node = malloc(sizeof(t_stack_node));
-	if (!node)
-		return ;
-	node->next = NULL;
-	node->data = n;
-	if (!(*stack))
+	num = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'
+			|| str[i] == '\n' || str[i] == '\v'
+			|| str[i] == '\f' || str[i] == '\r'))
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		*stack = node;
-		node->prev = NULL;
-		last_node = find_last_node(*stack);
-		last_node->next = node;
-		node->prev = last_node;
+		sign *= -1;
+		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = (num * 10) + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
 }

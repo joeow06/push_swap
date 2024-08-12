@@ -13,6 +13,19 @@
 #include "push_swap.h"
 #include <stdio.h>
 
+void	print_stack(t_stack_node *a)
+{
+	printf("im in\n");
+	t_stack_node *temp;
+	while (temp)
+	{
+		printf("%d", temp->data);
+		temp = temp->next;
+	}
+	printf("\n");
+	printf("im done\n");
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
@@ -25,7 +38,7 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
 	stack_init(&a, argv + 1);
-	if (!stack_sorted(a))
+	/*if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
 			sa(&a, false);
@@ -35,5 +48,7 @@ int	main(int argc, char **argv)
 			sort_stacks(&a, &b);
 	}
 	free_stack(&a);
+	*/
+	print_stack(a);
 	return (0);
 }

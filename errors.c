@@ -30,7 +30,7 @@ void	free_stack(t_stack_node **stack)
 	while (current)
 	{
 		tmp = current->next;
-		current->nbr = 0;
+		current->data = 0;
 		free(current);
 		current = tmp;
 	}
@@ -40,10 +40,10 @@ void	free_stack(t_stack_node **stack)
 int	error_repetition(t_stack_node *a, int n)
 {
 	if (!a)
-		retur (0);
+		return (0);
 	while (a)
 	{
-		if (a->nbr == n)
+		if (a->data == n)
 			return (1);
 		a = a->next;
 	}
