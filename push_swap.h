@@ -13,7 +13,8 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/inc/libft.h"
+# include "libft/inc/libft.h"
+# include "libft/inc/ft_printf.h"
 # include <stdbool.h>
 # include <stdlib.h>
 # include <limits.h>
@@ -44,5 +45,25 @@ int				error_syntax(char *str);
 // ** STACK_UTILS_C **
 void			append_node(t_stack_node **a, int n);
 t_stack_node	*find_last_node(t_stack_node *stack);
+int				stack_length(t_stack_node *stack);
+bool			stack_sorted(t_stack_node *stack);
+
+// ** SWAP_C **
+void			sa(t_stack_node **a);
+void			sb(t_stack_node **b);
+void			ss(t_stack_node **a, t_stack_node **b);
+
+// ** SORT_THREE_C **
+void			sort_three(t_stack_node **a);
+
+// ** ROTATE_C **
+void			ra(t_stack_node **a);
+void			rb(t_stack_node **b);
+void			rr(t_stack_node **a, t_stack_node **b);
+
+// ** REVERSE_ROTATE_C **
+void			rra(t_stack_node **a);
+void			rrb(t_stack_node **b);
+void			rrr(t_stack_node **a, t_stack_node **b);
 
 #endif

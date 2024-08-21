@@ -12,8 +12,40 @@
 
 #include "push_swap.h"
 
+int				stack_length(t_stack_node *stack);
+bool			stack_sorted(t_stack_node *stack);
 void			append_node(t_stack_node **a, int n);
 t_stack_node	*find_last_node(t_stack_node *stack);
+
+int	stack_length(t_stack_node *stack)
+{
+	int	i;
+
+	i = 0;
+	if (!stack)
+		return (0);
+	while (stack)
+	{
+		++i;
+		stack = stack->next;
+	}
+	return (i);
+}
+
+bool	stack_sorted(t_stack_node *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->data > stack->next->data)
+		{
+			return (false);
+		}
+		stack = stack->next;
+	}
+	return (true);
+}
 
 void	append_node(t_stack_node **stack, int n)
 {
