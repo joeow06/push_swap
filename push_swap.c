@@ -13,14 +13,14 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-static void	possible_sort(t_stack_node **a)
+static void	possible_sort(t_stack_node **a, t_stack_node **b)
 {
 	if (stack_length(*a) == 2)
 		sa(a);
 	else if (stack_length(*a) == 3)
 		sort_three(a);
 	else
-		sort_stacks(&a, &b);
+		sort_stacks(a, b);
 }
 
 static void	print_stack(t_stack_node *a)
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 	print_stack(a);
 	printf("stack_len: %d\n", stack_length(a));
 	if (!stack_sorted(a))
-		possible_sort(&a);
+		possible_sort(&a, &b);
 	if(stack_sorted(a))
 	{
 		printf("stack sorted: ");
@@ -62,6 +62,8 @@ int	main(int argc, char **argv)
 	{
 		printf("stack still not sorted: ");
 		print_stack(a);
+		printf("Stack B: ");
+		print_stack(b);
 		printf("\n");
 	}
 	free_stack(&a);

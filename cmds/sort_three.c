@@ -6,13 +6,13 @@
 /*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 15:32:51 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/19 15:32:52 by joeow            ###   ########.fr       */
+/*   Updated: 2024/08/22 23:54:36 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static t_stack_node	*find_max(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
 	int				largest;
 	t_stack_node	*largest_node;

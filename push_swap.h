@@ -6,7 +6,7 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/03 15:16:47 by joeow            ###   ########.fr       */
+/*   Updated: 2024/08/24 23:25:24 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,11 @@ void			sb(t_stack_node **b);
 void			ss(t_stack_node **a, t_stack_node **b);
 
 // ** SORT_THREE_C **
+t_stack_node	*find_max(t_stack_node *stack);
 void			sort_three(t_stack_node **a);
+
+//** SORT_STACKS_C **
+void			sort_stacks(t_stack_node **a, t_stack_node **b);
 
 // ** ROTATE_C **
 void			ra(t_stack_node **a);
@@ -65,5 +69,18 @@ void			rr(t_stack_node **a, t_stack_node **b);
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **b);
 void			rrr(t_stack_node **a, t_stack_node **b);
+
+// ** PUSH_C **
+void			pa(t_stack_node **a, t_stack_node **b, bool print);
+void			pb(t_stack_node **b, t_stack_node **a, bool print);
+
+// ** INIT_A_C **
+void			init_nodes_a(t_stack_node *a, t_stack_node *b);
+void			current_position(t_stack_node *stack);	
+void			set_target_node(t_stack_node *a, t_stack_node *b);
+void			cost_analysis_a(t_stack_node *a, t_stack_node *b);
+void			set_cheapest(t_stack_node *stack);
+
+// ** INIT_B_C **
 
 #endif
