@@ -6,7 +6,7 @@
 /*   By: jow <jow@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 14:54:23 by jow               #+#    #+#             */
-/*   Updated: 2024/08/24 23:27:29 by jow              ###   ########.fr       */
+/*   Updated: 2024/08/28 16:39:37 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	set_cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
-void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
+void	set_price(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
 	int	len_b;
@@ -52,7 +52,7 @@ void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-void	set_target_node(t_stack_node *a, t_stack_node *b)
+void	set_target_node_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*target_node;
 	t_stack_node	*current_b;
@@ -82,7 +82,7 @@ void	set_target_node(t_stack_node *a, t_stack_node *b)
 
 void	current_position(t_stack_node *stack)
 {
-	int	index;
+	int	i;
 	int	median;
 
 	i = 0;
@@ -105,7 +105,7 @@ void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
 	current_position(a);
 	current_position(b);
-	set_target_node(a, b);
+	set_target_node_a(a, b);
 	set_price(a, b);
 	set_cheapest(a);
 }

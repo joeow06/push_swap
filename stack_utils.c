@@ -6,16 +6,37 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 13:13:01 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/08 13:13:02 by joeow            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:40:50 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+t_stack_node	*find_min(t_stack_node *stack);
 int				stack_length(t_stack_node *stack);
 bool			stack_sorted(t_stack_node *stack);
 void			append_node(t_stack_node **a, int n);
 t_stack_node	*find_last_node(t_stack_node *stack);
+
+t_stack_node	*find_min(t_stack_node *stack)
+{
+	long			min;
+	t_stack_node	*min_node;
+
+	if (!stack)
+		return (NULL);
+	min = LONG_MAX;
+	while (stack)
+	{
+		if (stack->data < min)
+		{
+			min = stack->data;
+			min_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (min_node);
+}
 
 int	stack_length(t_stack_node *stack)
 {

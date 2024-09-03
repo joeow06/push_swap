@@ -6,7 +6,7 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/24 23:25:24 by jow              ###   ########.fr       */
+/*   Updated: 2024/08/28 16:54:54 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,11 @@ typedef struct s_stack_node
 }	t_stack_node;
 
 // ** STACK_INIT_C **
+t_stack_node	*get_cheapest(t_stack_node *stack);
 void			stack_init(t_stack_node **a, char **argv);
+void			prep_for_push(t_stack_node **stack,
+					t_stack_node *top_node,
+					char stack_name);
 
 // ** ERRORS_C ** 
 void			free_errors(t_stack_node **a);
@@ -43,6 +47,7 @@ int				error_repetition(t_stack_node *a, int n);
 int				error_syntax(char *str);
 
 // ** STACK_UTILS_C **
+t_stack_node	*find_min(t_stack_node *stack);
 void			append_node(t_stack_node **a, int n);
 t_stack_node	*find_last_node(t_stack_node *stack);
 int				stack_length(t_stack_node *stack);
@@ -77,10 +82,11 @@ void			pb(t_stack_node **b, t_stack_node **a, bool print);
 // ** INIT_A_C **
 void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			current_position(t_stack_node *stack);	
-void			set_target_node(t_stack_node *a, t_stack_node *b);
-void			cost_analysis_a(t_stack_node *a, t_stack_node *b);
+void			set_target_node_a(t_stack_node *a, t_stack_node *b);
+void			set_price(t_stack_node *a, t_stack_node *b);
 void			set_cheapest(t_stack_node *stack);
 
 // ** INIT_B_C **
+void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 
 #endif

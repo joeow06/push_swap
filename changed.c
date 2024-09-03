@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   changed.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/05 13:50:50 by joeow            ###   ########.fr       */
+/*   Updated: 2024/09/02 14:29:13 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
+	int			i;
 
+	i = 1;
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
@@ -46,14 +48,17 @@ int	main(int argc, char **argv)
 	{
 		argv = ft_split(argv[1], ' ');
 		stack_init(&a, argv);
+		while (argv[i])
+			free(argv[i++]);
+		free(argv);
 	}
 	else
 		stack_init(&a, argv + 1);
-	print_stack(a);
-	printf("stack_len: %d\n", stack_length(a));
+//	print_stack(a);
+//	printf("stack_len: %d\n", stack_length(a));
 	if (!stack_sorted(a))
 		possible_sort(&a, &b);
-	if(stack_sorted(a))
+/*	if(stack_sorted(a))
 	{
 		printf("stack sorted: ");
 		print_stack(a);
@@ -66,6 +71,7 @@ int	main(int argc, char **argv)
 		print_stack(b);
 		printf("\n");
 	}
+*/
 	free_stack(&a);
 	return (0);
 }
