@@ -6,11 +6,22 @@
 /*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 15:32:51 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/22 23:54:36 by jow              ###   ########.fr       */
+/*   Updated: 2024/09/03 21:59:08 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	min_on_top(t_stack_node **a)
+{
+	while ((*a)->data != find_min(*a)->data)
+	{
+		if (find_min(*a)->above_median)
+			ra(a);
+		else
+			rra(a);
+	}
+}
 
 t_stack_node	*find_max(t_stack_node *stack)
 {

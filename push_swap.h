@@ -6,7 +6,7 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/28 16:54:54 by jow              ###   ########.fr       */
+/*   Updated: 2024/09/03 22:00:35 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void			ss(t_stack_node **a, t_stack_node **b);
 // ** SORT_THREE_C **
 t_stack_node	*find_max(t_stack_node *stack);
 void			sort_three(t_stack_node **a);
+void	min_on_top(t_stack_node **a);
 
 //** SORT_STACKS_C **
 void			sort_stacks(t_stack_node **a, t_stack_node **b);

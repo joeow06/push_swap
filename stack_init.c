@@ -6,7 +6,7 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/08/29 00:47:38 by jow              ###   ########.fr       */
+/*   Updated: 2024/09/03 21:57:28 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack_node	*get_cheapest(t_stack_node *stack);
 void			prep_for_push(t_stack_node **stack,
-				t_stack_node *top_node, char stack_name);
+					t_stack_node *top_node, char stack_name);
 void			stack_init(t_stack_node **a, char **argv);
 static	long		ft_atol(const char *str);
 

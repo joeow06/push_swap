@@ -6,7 +6,7 @@
 /*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 15:32:47 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/29 00:46:18 by jow              ###   ########.fr       */
+/*   Updated: 2024/09/03 21:59:27 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,6 @@ static void	move_b_a(t_stack_node **a, t_stack_node **b)
 {
 	prep_for_push(a, (*b)->target_node, 'a');
 	pa(a, b, true);
-}
-
-static void	min_on_top(t_stack_node **a)
-{
-	while ((*a)->data != find_min(*a)->data)
-	{
-		if (find_min(*a)->above_median)
-			ra(a);
-		else
-			rra(a);
-	}
 }
 
 static void	rev_rotate_both(t_stack_node **a,
