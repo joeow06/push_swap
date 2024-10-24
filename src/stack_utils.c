@@ -6,11 +6,11 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 13:13:01 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/28 16:40:50 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:36:11 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 t_stack_node	*find_min(t_stack_node *stack);
 int				stack_length(t_stack_node *stack);

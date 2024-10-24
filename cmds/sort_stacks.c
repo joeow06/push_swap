@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 15:32:47 by joeow             #+#    #+#             */
-/*   Updated: 2024/09/03 21:59:27 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:43:50 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	move_b_a(t_stack_node **a, t_stack_node **b)
 {
@@ -56,7 +56,7 @@ static void	move_a_b(t_stack_node **a, t_stack_node **b)
 	pb(b, a, true);
 }
 
-//The two if statements specifically handle cases where the stack a has 4 or 5 
+//The two if statements specifically handle cases where the stack a has 4 or 5
 //elements, ensuring that the stack is reduced to exactly 3 elements before the
 //final sorting and reintegration of the other elements from stack b.
 void	sort_stacks(t_stack_node **a, t_stack_node **b)

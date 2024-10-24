@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 15:32:51 by joeow             #+#    #+#             */
-/*   Updated: 2024/09/03 21:59:08 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:43:50 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 void	min_on_top(t_stack_node **a)
 {

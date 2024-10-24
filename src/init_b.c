@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jow <jow@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 14:55:39 by jow               #+#    #+#             */
-/*   Updated: 2024/08/28 16:40:31 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:36:11 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	set_target_node_b(t_stack_node *a, t_stack_node *b)
 {

@@ -6,11 +6,11 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:27:22 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/04 20:41:33 by joeow            ###   ########.fr       */
+/*   Updated: 2024/10/24 17:36:11 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	free_errors(t_stack_node **a)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 14:11:24 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/29 00:45:56 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:43:50 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	reverse_rotate(t_stack_node **stack)
 {

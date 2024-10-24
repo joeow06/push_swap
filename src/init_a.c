@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jow <jow@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 14:54:23 by jow               #+#    #+#             */
-/*   Updated: 2024/08/28 16:39:37 by jow              ###   ########.fr       */
+/*   Updated: 2024/10/24 17:36:11 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"	
+#include "../inc/push_swap.h"
 
 void	set_cheapest(t_stack_node *stack)
 {

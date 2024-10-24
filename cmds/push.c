@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeow <jow@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 14:11:31 by joeow             #+#    #+#             */
-/*   Updated: 2024/08/24 19:30:32 by joeow            ###   ########.fr       */
+/*   Updated: 2024/10/24 17:43:50 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	push(t_stack_node **dst, t_stack_node **src)
 {
