@@ -6,7 +6,7 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/10/24 17:36:11 by joeow            ###   ########.fr       */
+/*   Updated: 2024/10/29 20:43:47 by jow              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
+	{
+		write(2, "Error\n", 6); 
 		return (1);
+	}
 	else if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
