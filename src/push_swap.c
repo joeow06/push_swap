@@ -6,12 +6,25 @@
 /*   By: joeow <joeow@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 17:20:32 by jow               #+#    #+#             */
-/*   Updated: 2024/10/29 20:43:47 by jow              ###   ########.fr       */
+/*   Updated: 2024/11/18 16:59:24 by joeow            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 #include <stdio.h>
+
+static void	free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
 
 static void	possible_sort(t_stack_node **a, t_stack_node **b)
 {
@@ -27,23 +40,19 @@ int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
-	int				i;
 
-	i = 0;
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 	{
-		write(2, "Error\n", 6); 
+		write(2, "Error\n", 6);
 		return (1);
 	}
 	else if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
 		stack_init(&a, argv);
-		while (argv[i])
-			free(argv[i++]);
-		free(argv);
+		free_split(argv);
 	}
 	else
 		stack_init(&a, argv + 1);
